@@ -5,6 +5,7 @@ class NameCrawler:
 
     def __init__(self):
         self.names = []
+        self.namesLower = []
         self.url = 'https://en.wikipedia.org/w/api.php?action=query&format=json&prop=links&titles=List_of_programming_languages&pllimit=500'
         self.getNames(self.url)
 
@@ -17,6 +18,7 @@ class NameCrawler:
         fullList = pageid['links']
         for item in fullList:
             self.names.append((item['title']))
+            self.namesLower.append((item['title']).lower())
 
         if 'continue' in res:
             con = res['continue']

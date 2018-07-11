@@ -1,5 +1,4 @@
 from collections import defaultdict
-from src.NameCrawler import NameCrawler
 
 class TrieSuggester:
     def __init__(self):
@@ -16,11 +15,11 @@ class TrieSuggester:
     def search(self, word):
         node = self
         for w in word:
-            if w.lower() in node.children.lower():
+            if w in node.children:
                 node = node.children[w]
             else:
                 return []
-        # if prefix match, traverse to all leaf nodes from current node
+        # if prefix matches, traverse to all leaf nodes from current node
         result = []
         self.traverse(node, list(word), result) # convert word to a list of characters
         return [''.join(r) for r in result]
