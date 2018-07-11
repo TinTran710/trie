@@ -1,4 +1,4 @@
-# A Python Trie Prefix search code base
+# A Python prefix Trie-search code base
 
 ## Requirements
 - Python, Pip, VirtualEnv
