@@ -24,7 +24,7 @@ $ pip install -r requirements.txt
 
 - Run:
 ```
-$ server python.py
+$ python server.py
 ```
 
 - Access from browser at `localhost:4600/trie/index`
